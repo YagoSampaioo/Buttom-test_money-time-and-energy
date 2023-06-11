@@ -1,0 +1,54 @@
+body{
+    background-color: #222;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.toggleButtonContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggleButton {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.toggleButton.on {
+    background-color: #46c18c;
+}
+
+.toggleButton .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.toggleButton.on .slider {
+    transform: translateX(60px);
+}
+
+.toggleButtonTitle {
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+}
